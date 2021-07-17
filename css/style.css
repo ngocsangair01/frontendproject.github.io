@@ -41,6 +41,10 @@
   background-color: green;
   height: fit-content;
 }
+.header .function button:hover {
+  /* margin-top: -1px; */
+  border: 1px solid rgb(77, 173, 77);
+}
 .header .function button i {
   color: white;
   margin: 2px 5px;
@@ -53,6 +57,9 @@
   text-decoration: none;
   color: rgb(197, 195, 192);
   padding: 0 5px;
+}
+.header .function a:hover {
+  font-weight: bold;
 }
 /* dùng để chứa các menu mid */
 .header .menu {
@@ -134,7 +141,7 @@ dùng để chứa các menu bên trái
 
 /*Dùng để xem các menu bên trái*/
 .contain .contain_left {
-  padding-top: 100px;
+  margin-top: 250px;
   color: white;
   margin-left: 50px;
 }
@@ -143,44 +150,112 @@ dùng để chứa các menu bên trái
 }
 .contain .contain_left a:hover {
   color: white;
+  border-bottom: 2px solid white;
   transition: ease-out 0.2s;
   -moz-transition: ease-out 0.2s;
   -webkit-transition: ease-out 0.2s;
 }
 /*Dùng để sửa các menu ở giữa*/
-.contain .container_mid .menu_mid {
-  margin-top: 100px;
+.contain .contain_mid .menu_mid {
+  margin-top: 250px;
   display: flex;
   justify-content: space-between;
   background-image: url("../images/backgroundmenu.png");
 }
 /* Dùng để chứa các đầu vào bên trái của menu mid*/
-.contain .container_mid .menu_mid .left {
+.contain .contain_mid .menu_mid .left {
+  display: flex;
+  height: 40px;
 }
-.contain .container_mid .menu_mid .left > ul {
+.contain .contain_mid .menu_mid .left > ul {
+  align-items: center;
   list-style: none;
-  line-height: 30px;
+  display: block;
+  height: 40px;
+  padding-left: 0;
 }
-.contain .container_mid .menu_mid .left > ul > li {
-  list-style: none;
+.contain .contain_mid .menu_mid .left > ul > li {
   float: left;
-  padding: 0 15px;
+  margin: 0 30px 0 0;
+  line-height: 40px;
+  position: relative;
 }
-
+.contain .contain_mid .menu_mid .left > ul > li > a {
+  text-decoration: none;
+  display: block;
+  color: rgb(197, 195, 192);
+  font-weight: bold;
+  text-indent: 10px;
+}
+.contain .contain_mid .menu_mid .left > ul > li > a:hover {
+  background-image: url("../images/backgroundhover.png");
+  background-size: 100%;
+  color: white;
+  transition: ease-out 0.35s;
+  -moz-transition: ease-out 0.35s;
+  -webkit-transition: ease-out 0.35s;
+}
+.contain .contain_mid .menu_mid .left > ul > li > ul {
+  width: 300px;
+  background-image: url("../images/backgroundhoverulli.png");
+  background-size: 100%;
+  min-height: 100px;
+  display: none;
+  position: absolute;
+  box-shadow: 2px black;
+}
+.contain .contain_mid .menu_mid .left > ul > li > ul > li {
+  list-style: none;
+  margin-left: -20px;
+}
+.contain .contain_mid .menu_mid .left > ul > li > ul > li > a {
+  text-decoration: none;
+  color: rgb(197, 195, 192);
+}
+.contain .contain_mid .menu_mid .left > ul > li:hover > ul {
+  display: block;
+  transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+  -webkit-transition: ease-out 0.5s;
+}
+.contain .contain_mid .menu_mid .left > ul > li > ul li > a:hover {
+  border-bottom: 2px solid white;
+  color: white;
+  font-weight: bold;
+  transition: ease-out 0.1s;
+  -moz-transition: ease-out 0.1s;
+  -webkit-transition: ease-out 0.1s;
+}
 /* dùng để chứa các đầu vào bên phải của menu mid */
-.contain .container_mid .menu_mid .right {
+.contain .contain_mid .menu_mid .right {
+  margin-top: 8px;
   display: flex;
   align-items: center;
   height: 60%;
+  border: 2px solid rgb(11, 33, 133);
+  border-radius: 5px;
 }
 
-.contain .container_mid .menu_mid .right input {
+.contain .contain_mid .menu_mid .right input {
   background-color: rgb(59, 100, 144);
   border: none;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
-.contain .container_mid .menu_mid .right button {
-  background-color: rgb(17, 79, 146);
+.contain .contain_mid .menu_mid .right button {
+  background-color: rgb(26, 109, 197);
   border: none;
+  width: 30px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.contain .contain_mid .menu_mid .right input:hover {
+  border: 1px solid rgb(50, 47, 219);
+}
+.contain .contain_mid .menu_mid .right button:hover {
+  border: 1px solid rgb(21, 35, 228);
+  background-color: rgb(50, 47, 219);
+  color: white;
 }
 .contain_right {
   width: 200px;
