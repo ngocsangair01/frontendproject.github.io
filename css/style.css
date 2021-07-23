@@ -66,6 +66,7 @@
   display: flex;
   justify-content: center;
   line-height: 30px;
+  z-index: 999;
 }
 /*
 dùng để chứa các menu bên trái
@@ -82,6 +83,7 @@ dùng để chứa các menu bên trái
 .header .menu .nav > li {
   list-style: none;
   position: relative;
+  z-index: 2;
 }
 .header .menu .nav > li > a {
   text-decoration: none;
@@ -93,6 +95,7 @@ dùng để chứa các menu bên trái
 .header .menu .nav > li > a:hover {
   background-color: rgb(17, 79, 146);
   color: rgb(197, 195, 192);
+  z-index: 10;
   transition: ease-in 0.3s;
   -moz-transition: ease-in 0.3s;
   -webkit-transition: ease-in 0.3s;
@@ -108,6 +111,7 @@ dùng để chứa các menu bên trái
   list-style-type: none;
   margin-left: -31px;
   border-top: 2px solid white;
+  z-index: 10;
 }
 .header .menu .nav .home_menu li a {
   text-decoration: none;
@@ -126,6 +130,7 @@ dùng để chứa các menu bên trái
 }
 .header .menu .nav .home_menu li a:hover {
   font-weight: bold;
+  z-index: 10;
   transition: ease-out 0.2s;
   -moz-transition: ease-out 0.2s;
   -webkit-transition: ease-out 0.2s;
@@ -141,7 +146,7 @@ dùng để chứa các menu bên trái
 
 /*Dùng để xem các menu bên trái*/
 .contain .contain_left {
-  margin-top: 250px;
+  margin-top: 100px;
   color: white;
   margin-left: 50px;
 }
@@ -156,8 +161,17 @@ dùng để chứa các menu bên trái
   -webkit-transition: ease-out 0.2s;
 }
 /*Dùng để sửa các menu ở giữa*/
+.contain .contain_mid {
+  padding: 0 -100px;
+  max-width: 1000px;
+}
+.contain .contain_mid .list_mid {
+  max-width: 75%;
+  margin: auto;
+  /* max-height: ; */
+}
 .contain .contain_mid .menu_mid {
-  margin-top: 250px;
+  margin-top: 100px;
   display: flex;
   justify-content: space-between;
   background-image: url("../images/backgroundmenu.png");
@@ -179,6 +193,7 @@ dùng để chứa các menu bên trái
   margin: 0 30px 0 0;
   line-height: 40px;
   position: relative;
+  z-index: 1;
 }
 .contain .contain_mid .menu_mid .left > ul > li > a {
   text-decoration: none;
@@ -199,14 +214,16 @@ dùng để chứa các menu bên trái
   width: 300px;
   background-image: url("../images/backgroundhoverulli.png");
   background-size: 100%;
-  min-height: 100px;
+  min-height: 50px;
   display: none;
   position: absolute;
   box-shadow: 2px black;
+  transition: 1s;
 }
 .contain .contain_mid .menu_mid .left > ul > li > ul > li {
   list-style: none;
   margin-left: -20px;
+  transition: 1s;
 }
 .contain .contain_mid .menu_mid .left > ul > li > ul > li > a {
   text-decoration: none;
@@ -214,9 +231,7 @@ dùng để chứa các menu bên trái
 }
 .contain .contain_mid .menu_mid .left > ul > li:hover > ul {
   display: block;
-  transition: ease-out 0.5s;
-  -moz-transition: ease-out 0.5s;
-  -webkit-transition: ease-out 0.5s;
+  transition: 0.5s;
 }
 .contain .contain_mid .menu_mid .left > ul > li > ul li > a:hover {
   border-bottom: 2px solid white;
@@ -257,6 +272,315 @@ dùng để chứa các menu bên trái
   background-color: rgb(50, 47, 219);
   color: white;
 }
+/* dùng để chứa các poster mid */
+.poster_mid h2 {
+  color: white;
+}
+.poster_mid h3 {
+  color: white;
+}
+.poster_mid p {
+  color: white;
+}
+.poster_mid .text {
+  margin-top: 150px;
+}
+.poster_mid img {
+  margin-top: 20px;
+  max-width: 100%;
+}
+.poster_mid .visually-hidden {
+  color: white;
+}
+/* dùng để chỉnh sửa các game phần recommended */
+.popular {
+  margin-top: 150px;
+}
+.popular .carousel {
+  margin-top: 50px;
+}
+.popular .image {
+  width: 100%;
+}
+.popular .image img {
+  width: 100%;
+}
+.popular h2 {
+  color: white;
+}
+
+.images {
+  display: flex;
+  width: 20%;
+}
+.images .card {
+  background: none;
+  border: none;
+  margin: 5px;
+  border-radius: 7px;
+}
+/* .images1 img {
+  width: 100%;
+} */
+.card-body {
+  background-color: rgb(59, 100, 144);
+  width: 100%;
+  opacity: 0;
+  padding: auto;
+  color: white;
+  font-weight: bold;
+  margin: auto !important;
+  height: 60px;
+}
+.images .card:hover .card-body {
+  opacity: 1;
+  transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  -webkit-transition: ease-out 0.4s;
+}
+.images {
+  margin-bottom: 100px;
+}
+
+.browser {
+  margin-bottom: 50px;
+}
+.browser h2 {
+  color: white;
+  padding-bottom: 20px;
+}
+.browser .btn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: center;
+}
+.browser .btn button {
+  border: 1px solid white;
+  background-image: url("../images/btnhover.png");
+  background-size: 100%;
+  width: 24%;
+  border-radius: 7px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: center;
+  height: 50px;
+}
+.browser .btn button:hover {
+  background-image: url("../images/btnhover2.png");
+  background-size: 100%;
+}
+.browser .btn button p {
+  margin-top: 15px;
+}
+.recommended {
+  width: 100%;
+  margin-bottom: 100px;
+}
+.recommended h2 {
+  color: white;
+  padding-bottom: 50px;
+}
+.recommended .carousel-item {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+}
+.carousel-item .left {
+  width: 65%;
+}
+.carousel-item .left img {
+  width: 100%;
+}
+.carousel-item .right {
+  width: 35%;
+}
+.carousel-item h3 {
+  color: white;
+}
+.carousel-item > div {
+  display: flex;
+}
+.carousel-item .right .imgs {
+  margin-top: 55px;
+  width: 100%;
+}
+.carousel-item .right .top {
+  width: 100%;
+  display: flex;
+}
+.carousel-item .right .top img {
+  width: 40%;
+  padding: 5px;
+}
+/*
+  dùng để sửa các thông tin phần menu bên trên footer
+*/
+.prefooter {
+  margin-top: 50px;
+  display: block;
+  margin-bottom: 300px;
+}
+.prefooter h2 {
+  color: white;
+}
+.menuf {
+  /* position: absolute; */
+  /* width: 40%; */
+}
+
+.menuf > ul {
+  list-style: none;
+  line-height: 30px;
+  /* background-image: url("../images/backgroundhover.png"); */
+  background-size: 100%;
+  width: 80%;
+}
+.menuf > ul > li {
+  width: 100%;
+}
+.menuf > ul > li > a {
+  text-decoration: none;
+  /* padding-top: 15px 0; */
+}
+
+.menuf > ul > li > a:hover {
+  color: white;
+}
+.menuf > ul > li > ul {
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 1;
+}
+.menuf > ul > li > ul > li {
+  margin-left: -30px;
+}
+.game1 {
+  width: 618px;
+  height: 100%;
+  display: block;
+  margin: 10px 0;
+}
+.game1 .left {
+  width: 184px;
+  height: 100%;
+  float: left;
+}
+.game1 p {
+  margin-bottom: 2px;
+  line-height: 1rem;
+}
+.game1 h5 {
+  font-size: 1.1rem;
+}
+.game1 .right {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  height: 69px;
+  display: block;
+  width: 70%;
+}
+.game1:hover .right {
+  background-color: rgba(156, 194, 216, 1);
+  transition: ease-out 0.3s;
+  -moz-transition: ease-out 0.3s;
+  -webkit-transition: ease-out 0.3s;
+}
+.game1:hover h5 {
+  color: black;
+  transition: ease-out 0.3s;
+  -moz-transition: ease-out 0.3s;
+  -webkit-transition: ease-out 0.3s;
+}
+.game1:hover p {
+  color: black;
+  transition: ease-out 0.3s;
+  -moz-transition: ease-out 0.3s;
+  -webkit-transition: ease-out 0.3;
+}
+.game1 .right {
+  float: left;
+}
+.img_hover {
+  /* background-color: rgba(156, 194, 216, 1); */
+  background-image: url("../images/game/prefooter/1.1.png");
+  width: 308px;
+  height: 735px;
+  z-index: 9;
+}
+/*
+để chứa các thông tin bên phải
+*/
 .contain_right {
   width: 200px;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: nowrap; */
+  /* justify-content: space-around; */
+  align-items: flex-end;
+  /* align-content: space-between; */
+}
+.contain_right .box {
+  width: 70px;
+  height: 210px;
+  position: fixed;
+  /* background-color: white; */
+  /* border: 3px solid black; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: flex-end;
+  align-content: space-between;
+  margin-top: 300px;
+  /* opacity: 0.5; */
+}
+.contain_right .box button {
+  background: none;
+  border: none;
+}
+.contain_right .box img {
+  width: 70%;
+  border-radius: 30px;
+}
+.footer {
+  width: 100%;
+  min-height: 200px;
+  background-color: black;
+  margin-top: -280px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+.footer h3 {
+  color: rgb(83, 192, 244);
+}
+.footer button {
+  background-color: rgb(87, 111, 4);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  width: 75px;
+  height: 40px;
+}
+.footer button:hover {
+  background-color: rgb(117, 148, 7);
+}
+.footer p {
+  color: white;
+}
+.under_footer {
+  width: 100%;
+  height: 180px;
+  background-image: url("../images/underfooter.png");
+  background-size: 100%;
 }
