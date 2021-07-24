@@ -272,6 +272,10 @@ dùng để chứa các menu bên trái
   background-color: rgb(50, 47, 219);
   color: white;
 }
+/* dùng để chứa các poster mid */
+/*
+để chứa các thông tin bên phải
+*/
 .contain_right {
   width: 200px;
   display: flex;
@@ -308,7 +312,7 @@ dùng để chứa các menu bên trái
   width: 100%;
   min-height: 200px;
   background-color: black;
-  /* margin-top: -10px; */
+  margin-top: -280px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -339,113 +343,120 @@ dùng để chứa các menu bên trái
   background-image: url("../images/underfooter.png");
   background-size: 100%;
 }
-.banner_mid {
-  margin-top: 100px;
-}
-.banner_mid button {
-  border: none;
-}
-.banner_mid > button > img {
-  width: 100%;
-  background-size: 100%;
-}
-.banner_mid h1 {
-  padding-top: 100px;
-  font-weight: 300;
-  color: white;
-}
-.banner_mid button:hover img {
-  background-color: rgba(25, 124, 253, 0.2);
-  background-image: url("../images/games/banner.png");
-  background-size: 100%;
-  opacity: 1;
-  position: relative;
-}
-.cate_mid {
+.newworld {
   display: flex;
+  width: 1000px;
+  height: 444px;
+  background-image: url("../images/backgroundhoverulli.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
-.banner_mid p {
-  margin-top: 50px;
-  font-size: 30px;
-  color: rgb(216, 209, 255);
+.newworld .left2 {
+  width: 65%;
 }
-.cate_mid .left {
-  width: 70%;
-  /* background-color: rgb(27, 40, 56); */
-  /* min-height: 500px; */
-  display: block;
+.newworld .left2 .top2 {
+  width: 100%;
+  height: 80%;
+  background-image: url("../images/newworld/1.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 3px;
 }
-.search {
-  background-color: rgb(16, 24, 34);
-  min-height: 40px;
-  /* margin-right: 15px; */
+.newworld .left2 .bot2 {
+  width: 100%;
+  height: 16%;
+  display: flex;
+  margin: 7.5px 0;
 }
-.search input {
-  margin-left: 10px;
-  margin-top: 7px;
-  background-color: rgb(34, 58, 76);
-  border: 1px solid white;
-  border-radius: 5px;
-}
-.search button {
-  color: rgb(102, 191, 242);
-  background-color: rgb(34, 58, 76);
+.newworld .left2 .bot2 .btn1 {
+  width: 20%;
+  height: 100%;
+  background-image: url("../images/newworld/1.1.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
   border: none;
-  border-radius: 5px;
-  width: 75px;
-  height: 25px;
+  margin: 0 2px;
 }
-.search button:hover {
-  background-color: rgba(102, 191, 242, 0.883);
-  color: white;
+.newworld .left2 .bot2 .btn2 {
+  width: 20%;
+  height: 100%;
+  background-image: url("../images/newworld/1.2.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: none;
+  margin: 0 2px;
 }
-.game1 {
+.newworld .left2 .bot2 .btn3 {
+  width: 20%;
+  height: 100%;
+  background-image: url("../images/newworld/1.3.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: none;
+  margin: 0 2px;
+}
+.newworld .left2 .bot2 .btn4 {
+  width: 20%;
+  height: 100%;
+  background-image: url("../images/newworld/1.4.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: none;
+  margin: 0 2px;
+}
+.newworld .left2 .bot2 .btn5 {
+  width: 20%;
+  height: 100%;
+  background-image: url("../images/newworld/1.5.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: none;
+  margin: 0 2px;
+}
+.right2 {
+  margin-top: 3px;
+  margin-left: 15px;
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.right2 .img2 {
+  height: 35%;
   width: 100%;
-  display: block;
-  margin: 10px 0;
+  background-image: url("../images/newworld/pos.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
-.game1 .left1 {
-  width: 120px;
-  float: left;
+.right2 .content2 a:hover {
+  border-bottom: 2px solid black;
 }
-.game1 p {
-  margin-bottom: 2px;
-  line-height: 1rem;
-}
-.game1 h5 {
-  font-size: 1rem;
-}
-.game1 .right1 {
-  background-color: rgba(27, 40, 56);
-  color: white;
-  display: block;
+.purchase {
+  margin-top: 70px;
   width: 100%;
-  height: 44px;
 }
-.game1:hover .right1 {
-  background-color: rgba(156, 194, 216, 1);
-  transition: ease-out 0.3s;
-  -moz-transition: ease-out 0.3s;
-  -webkit-transition: ease-out 0.3s;
+.left3 {
+  width: 65%;
+  min-height: 180px;
+  /* background-image: url("../images/backgroundhoverulli.png"); */
 }
-.game1:hover h5 {
-  color: black;
-  transition: ease-out 0.3s;
-  -moz-transition: ease-out 0.3s;
-  -webkit-transition: ease-out 0.3s;
+.right3 {
+  width: 35%;
 }
-.game1:hover p {
-  color: black;
-  transition: ease-out 0.3s;
-  -moz-transition: ease-out 0.3s;
-  -webkit-transition: ease-out 0.3;
-}
-.cate_mid .right {
-  margin-left: 20px;
-  width: 30%;
-}
-.cate_mid .right .price {
-  border: 1px solid rgb(50, 62, 76);
-  border-radius: 5px;
+.box3 {
+  border-radius: 15px;
+  border: 2px solid rgb(215, 222, 255);
+  width: 100%;
+  min-height: 100px;
   margin-bottom: 20px;
+}
+.box3 .box_top {
+  /* background-image: url("../images/backgroundhoverulli.png"); */
+}
+.box3 .box_bot {
+  /* background-color: rgba(17, 79, 146, 0.781); */
+}
+.box3 .box_bot button:hover {
+  background-color: rgb(7, 214, 7);
+  border: 2px dashed rgb(7, 204, 7);
 }
